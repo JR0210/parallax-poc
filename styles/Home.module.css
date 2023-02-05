@@ -6,6 +6,7 @@
   padding: 6rem;
   min-height: 100vh;
   padding-top: 7rem;
+  background: linear-gradient(0deg, rgb(9 46 59) 0%, rgb(52 125 138) 100%);
 }
 
 .description {
@@ -171,12 +172,13 @@
   border-radius: 13px;
   padding: 16px;
   margin-left: 850px;
+  box-shadow: 10px 10px 20px 0px rgb(69 69 69 / 52%);
 }
 
 .boxinner {
   height: 100%;
   width: 100%;
-  background-color: #1b1b1b;
+  background: linear-gradient(270deg, rgba(59,59,59,1) 0%, rgba(27,27,27,1) 100%);
   border-radius: 10px;
   display: flex;
   flex-wrap: wrap;
