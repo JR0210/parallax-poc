@@ -1,3 +1,4 @@
+import { useEffect, useState } from "react";
 import Head from "next/head";
 import { Inter } from "@next/font/google";
 import styles from "@/styles/Home.module.css";
@@ -5,7 +6,13 @@ import styles from "@/styles/Home.module.css";
 const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
-  function getRandomInt(min: number, max: number) {
+  const [isLoaded, setIsLoaded] = useState(false);
+
+  useEffect(() => {
+    setIsLoaded(true);
+  }, []);
+
+  function getRandomInt(min: number, max: number): number {
     min = Math.ceil(min);
     max = Math.floor(max);
     return Math.floor(Math.random() * (max - min) + min);
@@ -43,7 +50,7 @@ export default function Home() {
             <span className={styles.subtitle}>Full Stack Developer</span>
           </h1>
           <div className={styles.perspectivebox}>
-            <div className={styles.boxinner}>{codeBlocks()}</div>
+            {isLoaded && <div className={styles.boxinner}>{codeBlocks()}</div>}
           </div>
         </div>
       </main>
