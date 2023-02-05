@@ -10,15 +10,14 @@ export default function Home() {
   }
   
   const colours = [
-    '#f44336',
-    '#e91e63',
-    '#9c27b0',
-    '#673ab7',
-    '#3f51b5',
-    '#2196f3',
+    '#ff7b72',
+    '#79c0ff',
+    '#a5d6ff',
+    '#d2a8ff',
+    '#7ee787'
   ]; 
 
-  const codeBlocks = (): Array<JSX.Element> => Array.from(Array(getRandomInt(7, 28)).keys()).map((_, i) => {
+  const codeBlocks = (): Array<JSX.Element> => Array.from(Array(getRandomInt(12, 28)).keys()).map((_, i) => {
     return (
       <div
         key={i}
