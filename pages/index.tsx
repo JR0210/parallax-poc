@@ -2,6 +2,8 @@ import Head from "next/head";
 import { Inter } from "@next/font/google";
 import styles from "@/styles/Home.module.css";
 
+const inter = Inter({ subsets: ['latin'] })
+
 export default function Home() {
   function getRandomInt(min: number, max: number) {
     min = Math.ceil(min);
@@ -34,8 +36,8 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className={styles.main}>
-        <div>
-          <h1 className={styles.title}>
+        <div className={styles.headercontainer}>
+          <h1 className={inter.className} style={{ position: 'absolute', zIndex: 20, fontSize: '4rem', textShadow: '3px 3px 1px rgba(77,77,77,0.5)' }}>
             Jacob Robinson
             <br />
             <span className={styles.subtitle}>Full Stack Developer</span>

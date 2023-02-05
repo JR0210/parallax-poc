@@ -5,6 +5,7 @@
   align-items: center;
   padding: 6rem;
   min-height: 100vh;
+  padding-top: 7rem;
 }
 
 .description {
@@ -151,6 +152,15 @@
   background-clip: content-box;
 }
 
+.headercontainer {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-grow: 1;
+  justify-content: center;
+  margin-left: -425px;
+}
+
 .perspectivebox {
   transform: perspective(203px) rotateX(0deg) rotateY(-13deg) rotateZ(0deg);
   transform-origin: center center;
@@ -160,6 +170,7 @@
   border-right: 6px solid #6f6f6f;
   border-radius: 13px;
   padding: 16px;
+  margin-left: 850px;
 }
 
 .boxinner {
@@ -171,6 +182,7 @@
   flex-wrap: wrap;
   gap: 8px;
   padding: 8px;
+  overflow: hidden;
 }
 
 /* Rounded rectangle CSS to give random colour and random pixel length with a gap between each */
