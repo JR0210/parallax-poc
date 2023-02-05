@@ -1,6 +1,6 @@
-import Head from 'next/head'
-import { Inter } from '@next/font/google'
-import styles from '@/styles/Home.module.css'
+import Head from "next/head";
+import { Inter } from "@next/font/google";
+import styles from "@/styles/Home.module.css";
 
 export default function Home() {
   function getRandomInt(min: number, max: number) {
@@ -8,24 +8,22 @@ export default function Home() {
     max = Math.floor(max);
     return Math.floor(Math.random() * (max - min) + min);
   }
-  
-  const colours = [
-    '#ff7b72',
-    '#79c0ff',
-    '#a5d6ff',
-    '#d2a8ff',
-    '#7ee787'
-  ]; 
 
-  const codeBlocks = (): Array<JSX.Element> => Array.from(Array(getRandomInt(12, 28)).keys()).map((_, i) => {
-    return (
-      <div
-        key={i}
-        className={styles.codeblock}
-        style={{ backgroundColor: colours[getRandomInt(0, colours.length)], width: `${getRandomInt(10, 100)}%` }}
-      ></div>
-    );
-  });
+  const colours = ["#ff7b72", "#79c0ff", "#a5d6ff", "#d2a8ff", "#7ee787"];
+
+  const codeBlocks = (): Array<JSX.Element> =>
+    Array.from(Array(getRandomInt(12, 28)).keys()).map((_, i) => {
+      return (
+        <div
+          key={i}
+          className={styles.codeblock}
+          style={{
+            backgroundColor: colours[getRandomInt(0, colours.length)],
+            width: `${getRandomInt(10, 100)}%`,
+          }}
+        ></div>
+      );
+    });
 
   return (
     <>
@@ -36,12 +34,17 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className={styles.main}>
-        <div className={styles.perspectivebox}>
-          <div className={styles.boxinner}>
-            {codeBlocks()}
+        <div>
+          <h1 className={styles.title}>
+            Jacob Robinson
+            <br />
+            <span className={styles.subtitle}>Full Stack Developer</span>
+          </h1>
+          <div className={styles.perspectivebox}>
+            <div className={styles.boxinner}>{codeBlocks()}</div>
           </div>
         </div>
       </main>
     </>
-  )
+  );
 }
