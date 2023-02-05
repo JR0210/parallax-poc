@@ -156,7 +156,7 @@
   transform-origin: center center;
   width: 500px;
   height: 400px;
-  background: #b7b7b7;
+  background: linear-gradient(90deg, rgba(183,183,183,1) 0%, rgba(183,183,183,1) 91%, rgba(117,117,117,1) 100%);
   border-right: 6px solid #6f6f6f;
   border-radius: 13px;
   padding: 16px;
