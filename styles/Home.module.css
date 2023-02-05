@@ -151,6 +151,34 @@
   background-clip: content-box;
 }
 
+.perspectivebox {
+  transform: perspective(203px) rotateX(0deg) rotateY(-13deg) rotateZ(0deg);
+  transform-origin: center center;
+  width: 500px;
+  height: 400px;
+  background: #b7b7b7;
+  border-right: 6px solid #6f6f6f;
+  border-radius: 13px;
+  padding: 16px;
+}
+
+.boxinner {
+  height: 100%;
+  width: 100%;
+  background-color: #1b1b1b;
+  border-radius: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding: 8px;
+}
+
+/* Rounded rectangle CSS to give random colour and random pixel length with a gap between each */
+.codeblock {
+  height: 14px;
+  border-radius: 6px;
+}
+
 /* Enable hover only on non-touch devices */
 @media (hover: hover) and (pointer: fine) {
   .card:hover {
